@@ -1,0 +1,62 @@
+2018-07-30 15:51:23,690 INFO  [main] TestApp: Starting TestApp on intellect5-Lenovo-ideapad-310-15IKB with PID 11851 (/home/intellect-5/eclipse-workspace/Test/target/classes started by intellect-5 in /home/intellect-5/eclipse-workspace/Test)
+2018-07-30 15:51:23,692 DEBUG [main] TestApp: Running with Spring Boot v1.5.11.RELEASE, Spring v4.3.15.RELEASE
+2018-07-30 15:51:23,693 INFO  [main] TestApp: The following profiles are active: swagger,no-liquibase,dev
+2018-07-30 15:51:23,864 DEBUG [background-preinit] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-07-30 15:51:24,308 WARN  [main] AnnotationConfigEmbeddedWebApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: @Configuration class 'DefaultProfileUtil' may not be final. Remove the final modifier to continue.
+Offending resource: class path resource [com/intellect/hrm/config/DefaultProfileUtil.class]
+2018-07-30 15:51:24,319 ERROR [main] SpringApplication: Application startup failed
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: @Configuration class 'DefaultProfileUtil' may not be final. Remove the final modifier to continue.
+Offending resource: class path resource [com/intellect/hrm/config/DefaultProfileUtil.class]
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.context.annotation.ConfigurationClass.validate(ConfigurationClass.java:214)
+	at org.springframework.context.annotation.ConfigurationClassParser.validate(ConfigurationClassParser.java:209)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:309)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:228)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:272)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:92)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at com.intellect.hrm.TestApp.main(TestApp.java:59)
+2018-07-30 15:52:09,563 INFO  [main] TestApp: Starting TestApp on intellect5-Lenovo-ideapad-310-15IKB with PID 11934 (/home/intellect-5/eclipse-workspace/Test/target/classes started by intellect-5 in /home/intellect-5/eclipse-workspace/Test)
+2018-07-30 15:52:09,565 DEBUG [main] TestApp: Running with Spring Boot v1.5.11.RELEASE, Spring v4.3.15.RELEASE
+2018-07-30 15:52:09,566 INFO  [main] TestApp: The following profiles are active: swagger,no-liquibase,dev
+2018-07-30 15:52:09,772 DEBUG [background-preinit] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2018-07-30 15:52:10,512 ERROR [main] SpringApplication: Application startup failed
+java.lang.IllegalStateException: Cannot load configuration class: com.intellect.hrm.config.DefaultProfileUtil
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:403)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:249)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:127)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:687)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:525)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at com.intellect.hrm.TestApp.main(TestApp.java:59)
+Caused by: java.lang.IllegalArgumentException: No visible constructors in class com.intellect.hrm.config.DefaultProfileUtil
+	at org.springframework.cglib.proxy.Enhancer.filterConstructors(Enhancer.java:666)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:567)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:33)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanFactoryAwareGeneratorStrategy.generate(ConfigurationClassEnhancer.java:252)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:329)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:492)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:480)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:337)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:138)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:393)
+	... 10 common frames omitted
